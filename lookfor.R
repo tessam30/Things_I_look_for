@@ -8,6 +8,12 @@
 # Checking for uniqueness using var1 and var2
 x2 = distinct(df, var1, var2, .keep_all= TRUE)
 
+# Count the number of distinct values taken by a set of variables
+df %>% group_by(var1, var2) %>% n_groups()
+
+# Equivalent of inrange in Stata inrange(var, 3, 5)
+df %>% filter(between(var2, 3, 5))
+
 # dropping vars from a data frop (like drop)
 select(df, -var1, var2)
 
