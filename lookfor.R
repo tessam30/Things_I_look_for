@@ -79,10 +79,17 @@ read_path %>%
   # the name provided by the set_names(command). Necessary b/c not all the sheets are the same size
   list2env(., envir = .GlobalEnv)
 
-
 # ----------------- Writing list to multiple files ----------------------
 
+datalist <- list(impr_sanit  = impr_sanit, 
+               unimp_sanit   = unimp_sanit,
+               impr_h20      = impr_h20,
+               unimpr_h20    = unimpr_h20, 
+               waste         = waste) 
 
+datalist %>%  
+  names() %>% 
+  map(., ~ write_csv(datalist[[.]], file.path(washpath, str_c(., ".csv"))))
 
 
 #------------------------------- Data Table chunks  -------------------
