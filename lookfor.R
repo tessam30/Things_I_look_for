@@ -47,6 +47,9 @@ dput(names(shocks))
 #------------------------------- Purrr chunks  -------------------
 # https://www.hvitfeldt.me/2018/01/purrr-tips-and-tricks/
 
+# Convert each element of a list into objects
+list2env(my_list ,envir=.GlobalEnv)
+
 ##### Subsetting elements in a list
 # Convert an element from a list to a data.frame, retaining names
 geo_cw <- map_df(df_wash[6], `[`)
