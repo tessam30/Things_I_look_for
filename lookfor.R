@@ -80,6 +80,11 @@ read_path %>%
   list2env(., envir = .GlobalEnv)
 
 
+# ----------------- Writing list to multiple files ----------------------
+
+
+
+
 #------------------------------- Data Table chunks  -------------------
 
 
