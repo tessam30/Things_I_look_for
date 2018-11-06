@@ -6,6 +6,8 @@
 
 # Akin to Stata's isid command inside dplyr
 # Checking for uniqueness using var1 and var2
+
+#------------------------------- Dplyr chunks  -------------------
 x2 = distinct(df, var1, var2, .keep_all= TRUE)
 
 # Count the number of distinct values taken by a set of variables
@@ -42,8 +44,39 @@ na_if(k, "")
 # Print a list of names to the screen in a 
 dput(names(shocks))
 
+#------------------------------- Purrr chunks  -------------------
+
+##### Subsetting elements in a list
+# Convert an element from a list to a data.frame, retaining names
+geo_cw <- map_df(df_wash[6], `[`)
+
+# can also use pluck
+test <- df_wash %>% pluck(6)
+
+# Batch load excel sheets
+# First, set the read path of the where spreadsheet lives
+read_path <- file.path(datapath, "KEN_WASH_2018_tables.xlsx")
+
+# Write everything into a list
+df_wash <- excel_sheets(read_path) %>%
+  set_names() %>%
+  map(read_excel, path = read_path)
+
+# Or, write everything to separate objects
+read_path %>%
+  excel_sheets() %>%
+  
+  # Use basename with the file_path_sans_ext to strip extra info; Not NEEDED
+  # set_names(nm = (basename(.) %>% tools::file_path_sans_ext())) %>%
+  set_names() %>%
+  map(~read_excel(path = read_path, sheet = .x), .id = "sheet") %>%
+  
+  # Use the list2env command to convert the list of dataframes to separate dfs using 
+  # the name provided by the set_names(command). Necessary b/c not all the sheets are the same size
+  list2env(., envir = .GlobalEnv)
 
 
+#------------------------------- Data Table chunks  -------------------
 
 
 
