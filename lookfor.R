@@ -45,6 +45,7 @@ na_if(k, "")
 dput(names(shocks))
 
 #------------------------------- Purrr chunks  -------------------
+# https://www.hvitfeldt.me/2018/01/purrr-tips-and-tricks/
 
 ##### Subsetting elements in a list
 # Convert an element from a list to a data.frame, retaining names
