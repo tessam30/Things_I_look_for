@@ -93,8 +93,40 @@ datalist %>%
 
 
 #------------------------------- Tidy Eval  -------------------
+# https://dplyr.tidyverse.org/articles/programming.html
 
+# quo returns a quosure
+# First quo, then !!
+my_var <- quo(a)
+summarise(df, mean = mean(!! my_var), sum = sum(!! my_var), n = n())
 
+# For functions, use enquo and !! within
+my_summarise2 <- function(df, expr) {
+  expr <- enquo(expr)
+
+  summarise(df,
+    mean = mean(!! expr),
+    sum = sum(!! expr),
+    n = n()
+  )
+}
+
+# Create new variable names bsed on expr
+my_mutate <- function(df, expr) {
+  expr <- enquo(expr)
+  mean_name <- paste0("mean_", quo_name(expr))
+  sum_name <- paste0("sum_", quo_name(expr))
+
+  mutate(df,
+    !! mean_name := mean(!! expr),
+    !! sum_name := sum(!! expr)
+  )
+}
+
+# Need three things to capture multiple variables for group_by
+# 1. use the ... in the function definition to capture any number of arguments
+# 2. use quos(...) to capture the ... as a list of formulas
+# 3. use !!! to splice the arguments into the group_by command
 
 
 
