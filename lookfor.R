@@ -92,7 +92,7 @@ datalist %>%
   map(., ~ write_csv(datalist[[.]], file.path(washpath, str_c(., ".csv"))))
 
 
-#------------------------------- Data Table chunks  -------------------
+#------------------------------- Tidy Eval  -------------------
 
 
 
