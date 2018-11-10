@@ -13,6 +13,9 @@ x2 = distinct(df, var1, var2, .keep_all= TRUE)
 # Count the number of distinct values taken by a set of variables
 df %>% group_by(var1, var2) %>% n_groups()
 
+# Create a sequential id based on a order in dataset
+df %>% arrange(id1, id2) %>% mutate(id = row_number())
+
 # Equivalent of inrange in Stata inrange(var, 3, 5)
 df %>% filter(between(var2, 3, 5))
 
