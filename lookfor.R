@@ -40,6 +40,10 @@ mydata10 = filter(df, grepl("Ar", State))
 # Summarise over variables - creating 3 new calcuations for each variable
 summarise_at(df, vars(var1, var2), funs(n(), mean, median))
 
+# Summarise if removing NAs
+starwars %>% summarise_if(is.numeric, mean, na.rm = TRUE)
+
+
 # Convert values to na
 k <- c("a", "b", "", "d")
 na_if(k, "")
@@ -132,5 +136,33 @@ my_mutate <- function(df, expr) {
 # 3. use !!! to splice the arguments into the group_by command
 
 
+#------------------------------- Case When  -------------------
+
+df %>% mutate(age = case_when(
+    age_range == "population"      ~ "All",
+    age_range == "population_0_17" ~ "0_17",
+    age_range == "population_0_5"  ~ "0_5",
+    age_range == "population_6_13" ~ "6_13",  
+  TRUE ~ "14_17" # -- sets any other value as 14_17
+  ))
+
+# With GREP
+
+mutate(var = case_when(
+  grepl("Windows", os) ~ "Windows-ish",
+  grepl("Red Hat|CentOS|Fedora", os) ~ "Fedora-ish",
+  grepl("Ubuntu|Debian", os) ~ "Debian-ish",
+  grepl("CoreOS|Amazon", os) ~ "Amazon-ish",
+  is.na(os) ~ "Unknown",
+  ELSE ~ "Other"
+) 
+
+# standard example
+ case_when(
+  x %% 35 == 0 ~ "fizz buzz",
+  x %% 5 == 0 ~ "fizz",
+  x %% 7 == 0 ~ "buzz",
+  TRUE ~ as.character(x)
+)
 
 
