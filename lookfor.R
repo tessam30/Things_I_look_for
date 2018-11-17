@@ -148,7 +148,7 @@ df %>% mutate(age = case_when(
 
 # With GREP
 
-mutate(var = case_when(
+case_when(
   grepl("Windows", os) ~ "Windows-ish",
   grepl("Red Hat|CentOS|Fedora", os) ~ "Fedora-ish",
   grepl("Ubuntu|Debian", os) ~ "Debian-ish",
@@ -164,5 +164,22 @@ mutate(var = case_when(
   x %% 7 == 0 ~ "buzz",
   TRUE ~ as.character(x)
 )
+       
+#------------------------------- ggplot colors  ------------------- 
+# Use scale_fill_gradientn when you want to set a balanced divergent palette
+
+# Define your max value in an object (here called shock_dev_max)
+shock_dev_max = unlist(shock_stats_county %>% summarise(max_dev = max(abs(shock_dev))))
+
+ df_spatial %>% ggplot() +
+    geom_sf(aes(fill = shock_dev), colour = "white", size = 0.5) +
+    scale_fill_gradientn(colours = RColorBrewer::brewer.pal(11, 'PiYG'),
+                         limits = c(-1 * shock_dev_max, shock_dev_max), 
+                         labels = scales::percent) + ...
+
+# For color brewer scale_fill_brewer and scale_colour_brewer are for categorical data
+# Use scale_fill_distiller or scale_color_distiller for continuous data. 
+# If the aesthetics are fill = x then use former, if colour = x, then latter
+
 
 
