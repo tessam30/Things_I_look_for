@@ -15,4 +15,5 @@
 | Sweet Potato | https://bakerbynature.com/extra-crispy-sweet-potato-wedges/ |
 | Whole Grain Pancakes | https://cooking.nytimes.com/recipes/1019362-whole-grain-pancakes |
 | Pizza dough | https://www.browneyedbaker.com/neapolitan-pizza/ |
+| Pumpkin Pie | https://cooking.nytimes.com/recipes/1015621-pumpkin-pie-with-a-vodka-crust |
 
