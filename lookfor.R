@@ -51,6 +51,11 @@ na_if(k, "")
 # Print a list of names to the screen in a 
 dput(names(shocks))
 
+# Lags and Leads
+df %>%
+  mutate(prv_year_absorb = lag(Variable_to_lag, n = 1, order_by = year), 
+         absorb_delta = Variable_to_lag - prv_year_absorb)
+
 #------------------------------- Purrr chunks  -------------------
 # https://www.hvitfeldt.me/2018/01/purrr-tips-and-tricks/
 
