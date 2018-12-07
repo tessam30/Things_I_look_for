@@ -188,9 +188,19 @@ shock_dev_max = unlist(shock_stats_county %>% summarise(max_dev = max(abs(shock_
 
 
 
-#------------------------------- package ------------------- 
+#------------------------------- listing things ------------------- 
 # List all the functions in a package
 ls(package:stringr)
+
+# Listing everything in the workspace
+mget(ls())
+ls.str()
+
+# Get a list of attached packages and paths
+search()
+searchpaths()
+
+
 
 
 
