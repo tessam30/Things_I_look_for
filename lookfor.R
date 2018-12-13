@@ -204,6 +204,7 @@ searchpaths()
 # Use str_detect to quickly search through strings for key words
 str_detect(var, "string to detect")
 
+
 # For filtering (can also use for binary mutates)
 df %>% filter(str_detect(var, "string"))
 
@@ -211,6 +212,13 @@ df %>% filter(str_detect(var, "string"))
 cuisine_conf_ints %>%
   mutate(cuisine = str_remove(cuisine, " \\(.*"),
          cuisine = fct_reorder(cuisine, estimate))
+
+str_remove("text (with some markes here)", "\\(*")
+
+#------------------------------- Dates  ------------------- 
+# https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-10-23/movie_profit.csv
+# https://github.com/dgrtwo/data-screencasts/blob/master/movie-profit.Rmd
+mutate(release_date = as.Date(parse_date_time(release_date, "%m!/%d/%Y")))
 
 
 #------------------------------- Counts ------------------- 
@@ -227,3 +235,6 @@ cuisine_conf_ints <- by_dba %>%
   nest(-cuisine) %>%
   mutate(model = map(data, ~ t.test(.$avg_score))) %>%
   unnest(map(model, tidy))
+
+
+# Widening data and PCA -- see the widyr package - https://github.com/dgrtwo/widyr
