@@ -200,7 +200,30 @@ ls.str()
 search()
 searchpaths()
 
+#------------------------------- Searching strings ------------------- 
+# Use str_detect to quickly search through strings for key words
+str_detect(var, "string to detect")
+
+# For filtering (can also use for binary mutates)
+df %>% filter(str_detect(var, "string"))
+
+# Remove paratheses (from Tidy Tuesday w/ DROB - https://github.com/dgrtwo/data-screencasts/blob/master/nyc-restaurants.Rmd)
+cuisine_conf_ints %>%
+  mutate(cuisine = str_remove(cuisine, " \\(.*"),
+         cuisine = fct_reorder(cuisine, estimate))
+
+
+#------------------------------- Counts ------------------- 
+df %>% count(var1, var2, sort = TRUE)T
 
 
 
-
+#------------------------------- BROOMING ------------------- 
+# TT snippet -- same as above.
+library(broom)
+cuisine_conf_ints <- by_dba %>%
+  add_count(cuisine) %>%
+  filter(n > 100) %>%
+  nest(-cuisine) %>%
+  mutate(model = map(data, ~ t.test(.$avg_score))) %>%
+  unnest(map(model, tidy))
