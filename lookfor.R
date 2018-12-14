@@ -13,6 +13,12 @@ x2 = distinct(df, var1, var2, .keep_all= TRUE)
 # Count the number of distinct values taken by a set of variables
 df %>% group_by(var1, var2) %>% n_groups()
 
+# Create a unique ID based on a grouping - two step process
+# Akin to Stata egen = group(var1, var2)
+shk_df %>% 
+   mutate(id_tmp = interaction(clid, hhid)) %>% 
+   mutate(id = group_indices(., id_tmp))
+
 # Create a sequential id based on a order in dataset
 df %>% arrange(id1, id2) %>% mutate(id = row_number())
 
