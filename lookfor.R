@@ -192,6 +192,10 @@ shock_dev_max = unlist(shock_stats_county %>% summarise(max_dev = max(abs(shock_
 # Use scale_fill_distiller or scale_color_distiller for continuous data. 
 # If the aesthetics are fill = x then use former, if colour = x, then latter
 
+# Scales -- show only major numbers on percentage scale
+# add chunk below to ggplot call
+scale_y_continuous(labels = scales::percent_format(accuracy = 1))
+
 
 
 #------------------------------- listing things ------------------- 
