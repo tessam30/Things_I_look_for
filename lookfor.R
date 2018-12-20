@@ -196,7 +196,13 @@ shock_dev_max = unlist(shock_stats_county %>% summarise(max_dev = max(abs(shock_
 # add chunk below to ggplot call
 scale_y_continuous(labels = scales::percent_format(accuracy = 1))
 
+# To generate new colors
+colorRampPalette(brewer.pal(11,"Spectral"))(30) %>% knitr::kable(format = "rst")
+# in Atom command+D will do cursor highlighting down
 
+# To preview palettes
+palette(colorRampPalette(brewer.pal(11,"Spectral"))(30))
+plot(1:30, 1:30, col = 1:30, pch = 19, cex = 5)
 
 #------------------------------- listing things ------------------- 
 # List all the functions in a package
