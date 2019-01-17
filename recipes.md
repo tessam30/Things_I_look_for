@@ -24,7 +24,7 @@ Pizza dough
 * 567 grams (4 1/3 cups) 00 flour 
 * 10 grams salt 
 * 5 grams instant yeast 
-* 270 (1 and 2/3 cups) grams filtered, room temperature water 
+* 367 (1 and 2/3 cups) grams filtered, room temperature water 
 
 
 
