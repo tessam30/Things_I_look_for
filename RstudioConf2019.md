@@ -13,7 +13,7 @@
 
 
 #### Packages for defensive programming
-library(testthat)
+library(testthat)  
 library(assertthat)
 
 assert_that()
