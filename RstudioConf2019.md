@@ -6,7 +6,7 @@
 
 [Publication quality tables](https://gt.rstudio.com/)
 
-[Writing analytical reports](https://twitter.com/MikeKSmith/)
+[Writing analytical reports: waiting for video to post](https://twitter.com/MikeKSmith/)
 
 [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)
 
