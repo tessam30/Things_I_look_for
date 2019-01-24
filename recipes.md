@@ -4,6 +4,7 @@
 | Beets | https://theartofdelicious.wordpress.com/2011/11/08/roasted-and-marinated-beets/ |
 | Butternut Squash Linguine | https://cookieandkate.com/2014/creamy-vegan-butternut-squash-linguine-with-fried-sage/ |
 | Carnitas | https://www.seriouseats.com/recipes/2010/07/no-waste-tacos-de-carnitas-with-salsa-verde-recipe.html | 
+| Chocolate Chip Cookies | https://github.com/tessam30/Things_I_look_for/issues/3 | 
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
 | Noodles | https://www.allrecipes.com/recipe/11776/grandmas-noodles-ii/ |
 | Potato | https://www.seriouseats.com/recipes/2016/12/the-best-roast-potatoes-ever-recipe.html |
