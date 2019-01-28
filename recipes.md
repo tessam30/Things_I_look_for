@@ -5,6 +5,7 @@
 | Butternut Squash Linguine | https://cookieandkate.com/2014/creamy-vegan-butternut-squash-linguine-with-fried-sage/ |
 | Carnitas | https://www.seriouseats.com/recipes/2010/07/no-waste-tacos-de-carnitas-with-salsa-verde-recipe.html | 
 | Chocolate Chip Cookies | https://github.com/tessam30/Things_I_look_for/issues/3 | 
+| Mushroom soup | https://www.williams-sonoma.com/recipe/creamy-porcini-mushroom-soup.html |
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
 | Noodles | https://www.allrecipes.com/recipe/11776/grandmas-noodles-ii/ |
 | Potato | https://www.seriouseats.com/recipes/2016/12/the-best-roast-potatoes-ever-recipe.html |
@@ -19,13 +20,6 @@
 | Pizza dough | https://www.browneyedbaker.com/neapolitan-pizza/ |
 | Pumpkin Pie | https://cooking.nytimes.com/recipes/1015621-pumpkin-pie-with-a-vodka-crust |
 | White Choc Bark | https://www.tasteofhome.com/recipes/cranberry-almond-bark/ |
-
-
-Pizza dough
-* 567 grams (4 1/3 cups) 00 flour 
-* 10 grams salt 
-* 5 grams instant yeast 
-* 367 (1 and 2/3 cups) grams filtered, room temperature water 
 
 
 
