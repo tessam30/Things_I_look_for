@@ -254,3 +254,16 @@ cuisine_conf_ints <- by_dba %>%
 
 
 # Widening data and PCA -- see the widyr package - https://github.com/dgrtwo/widyr
+
+#------------------------------- Regular Expressio ------------------- 
+# https://www.jumpingrivers.com/blog/regular-expressions-every-r-programmer-should-know/
+library(stringr)
+# \ (backslash) is a metacharacter, have to escape it to search for it --> "\\"
+str_subset(dir(file.path(datapath)), "\\.csv")
+
+# ^ and the $
+# Use the ^ to indicate the start of line and $ to indicate the end of a line
+rm(list = ls(pattern = "*_in$")) # - removing dataframes/objects that end in "_in"
+
+
+
