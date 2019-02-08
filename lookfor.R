@@ -255,7 +255,7 @@ cuisine_conf_ints <- by_dba %>%
 
 # Widening data and PCA -- see the widyr package - https://github.com/dgrtwo/widyr
 
-#------------------------------- Regular Expressio ------------------- 
+#------------------------------- Regular Expression ------------------- 
 # https://www.jumpingrivers.com/blog/regular-expressions-every-r-programmer-should-know/
 library(stringr)
 # \ (backslash) is a metacharacter, have to escape it to search for it --> "\\"
@@ -266,4 +266,8 @@ str_subset(dir(file.path(datapath)), "\\.csv")
 rm(list = ls(pattern = "*_in$")) # - removing dataframes/objects that end in "_in"
 
 
-
+#------------------------------- Purrr'ing ------------------- 
+# Split on a group, peform action across all subgroups
+mtcars %>% 
+  split(.$cyl) %>% 
+  map(., ~ggplot(., aes(mpg, hp)) + geom_point())
