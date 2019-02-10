@@ -271,3 +271,6 @@ rm(list = ls(pattern = "*_in$")) # - removing dataframes/objects that end in "_i
 mtcars %>% 
   split(.$cyl) %>% 
   map(., ~ggplot(., aes(mpg, hp)) + geom_point())
+
+# ----------------------------- multi-line cursor --------------
+# `control` + `option` plus up or down
