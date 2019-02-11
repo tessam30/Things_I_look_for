@@ -176,7 +176,7 @@ case_when(
   TRUE ~ as.character(x)
 )
        
-#------------------------------- ggplot colors  ------------------- 
+#------------------------------- ggplot colors and plots ------------------- 
 # Use scale_fill_gradientn when you want to set a balanced divergent palette
 
 # Define your max value in an object (here called shock_dev_max)
@@ -204,9 +204,27 @@ colorRampPalette(RColorBrewer::brewer.pal(11,"Spectral"))(30) %>% knitr::kable(f
 palette(colorRampPalette(brewer.pal(11,"Spectral"))(30))
 plot(1:30, 1:30, col = 1:30, pch = 19, cex = 5)
 
+
+#-------------------------------- Plot specific -----------------------------
+
 # When plotting a heatmap, you can pass the label option through the scale_X_XX part. This allow
 # for formatting of percentages on the scale
 ... + scale_fill_viridis_c(direction = -1, alpha = 0.90, option = "A", label = percent_format(accuracy = 2)) + ...
+
+# Change the width of the legend
+... + theme(legend.position = "top",
+        legend.key.width = unit(2, "cm")) +
+
+
+
+
+
+
+
+
+
+
+
 
 #------------------------------- listing things ------------------- 
 # List all the functions in a package
