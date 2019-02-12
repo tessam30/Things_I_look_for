@@ -86,16 +86,20 @@ df_wash <- excel_sheets(read_path) %>%
 
 # Or, write everything to separate objects
 read_path %>%
-  excel_sheets() %>%
-  
-  # Use basename with the file_path_sans_ext to strip extra info; Not NEEDED
-  # set_names(nm = (basename(.) %>% tools::file_path_sans_ext())) %>%
+  excel_sheets() %>% 
+ # Use basename with the file_path_sans_ext to strip extra info; Not NEEDED
+ # set_names(nm = (basename(.) %>% tools::file_path_sans_ext())) %>%
   set_names() %>%
   map(~read_excel(path = read_path, sheet = .x), .id = "sheet") %>%
   
   # Use the list2env command to convert the list of dataframes to separate dfs using 
   # the name provided by the set_names(command). Necessary b/c not all the sheets are the same size
   list2env(., envir = .GlobalEnv)
+
+# Loop over columns and summarise stuff
+df %>% 
+  select(`Education Strategy Area(s)`:`Research Approach`) %>% 
+  map(tab_that)
 
 # ----------------- Writing list to multiple files ----------------------
 
@@ -215,13 +219,8 @@ plot(1:30, 1:30, col = 1:30, pch = 19, cex = 5)
 ... + theme(legend.position = "top",
         legend.key.width = unit(2, "cm")) +
 
-
-
-
-
-
-
-
+# Add captions
+... + labs(caption = "text to add") +...
 
 
 
