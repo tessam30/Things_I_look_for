@@ -116,6 +116,7 @@ datalist %>%
 
 #------------------------------- Tidy Eval  -------------------
 # https://dplyr.tidyverse.org/articles/programming.html
+# https://edwinth.github.io/blog/dplyr-recipes/ - recipes for basic use
 
 # quo returns a quosure
 # First quo, then !!
@@ -222,6 +223,11 @@ plot(1:30, 1:30, col = 1:30, pch = 19, cex = 5)
 # Add captions
 ... + labs(caption = "text to add") +...
 
+# Add titles to plots based on text/vars passed through tidy eval
+ xvar = enquo(x) ...
+...      labs(caption = "GeoCenter Calculations from MSME 2016 Report",
+           title = (gsub("`", "", {rlang::quo_text(xvar)})))
+ 
 
 
 
