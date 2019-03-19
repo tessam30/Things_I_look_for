@@ -301,3 +301,7 @@ mtcars %>%
 
 # ----------------------------- multi-line cursor --------------
 # `control` + `option` plus up or down
+
+# ----------------------------- System or packages loaded --------
+ sessionInfo()
+(.packages())
