@@ -22,6 +22,7 @@
 | Whole Grain Pancakes | https://cooking.nytimes.com/recipes/1019362-whole-grain-pancakes |
 | Pumpkin Pie | https://cooking.nytimes.com/recipes/1015621-pumpkin-pie-with-a-vodka-crust |
 | White Choc Bark | https://www.tasteofhome.com/recipes/cranberry-almond-bark/ |
+| Yogurt | https://github.com/tessam30/Things_I_look_for/issues/6 |
 
 
 
