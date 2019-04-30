@@ -15,6 +15,7 @@
 | Pumpkin Pancakes | https://cooking.nytimes.com/recipes/1018934-fluffy-pumpkin-pancakes?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Quinoa Pancakes | https://cooking.nytimes.com/recipes/1013615-quinoa-pancakes?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Roasted Potatos | https://www.seriouseats.com/recipes/2016/12/the-best-roast-potatoes-ever-recipe.html |
+| Roasted Almonds | https://github.com/tessam30/Things_I_look_for/issues/7#issue-438947051 | 
 | Sausage One Pot Pasta | https://damndelicious.net/2013/12/09/one-pot-andouille-sausage-skillet-pasta/ |
 | Sticky Cranberry Bread | https://cooking.nytimes.com/recipes/1017758-sticky-cranberry-gingerbread?action=click&module=Local%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Sweet Potato | https://bakerbynature.com/extra-crispy-sweet-potato-wedges/ |
