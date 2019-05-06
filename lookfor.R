@@ -209,6 +209,8 @@ colorRampPalette(RColorBrewer::brewer.pal(11,"Spectral"))(30) %>% knitr::kable(f
 palette(colorRampPalette(brewer.pal(11,"Spectral"))(30))
 plot(1:30, 1:30, col = 1:30, pch = 19, cex = 5)
 
+#
+
 
 #-------------------------------- Plot specific -----------------------------
 
