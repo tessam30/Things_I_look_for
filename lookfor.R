@@ -209,6 +209,35 @@ colorRampPalette(RColorBrewer::brewer.pal(11,"Spectral"))(30) %>% knitr::kable(f
 palette(colorRampPalette(brewer.pal(11,"Spectral"))(30))
 plot(1:30, 1:30, col = 1:30, pch = 19, cex = 5)
 
+# Plotting reference bars
+# When plotting geom_rect (reference bars), ggplot will plot a copy of each bar for each row in a dataframe
+# This is incredibly annoying when you want to decrease the opacity or edit the reference bars in inkscape / AI
+# To get around this problem, pipe in the first row the data frame you are plotting to the geom_rect call
+# link: https://stackoverflow.com/questions/17521438/geom-rect-and-alpha-does-this-work-with-hard-coded-values; 
+# Example below from the Kenya Middle and Upper Arm Circumference data at the county level
+muac_malnut %>% 
+  filter(county %in% c("Turkana", "Marsabit", "Isiolo", "Samburu")) %>% 
+  group_by(county) %>% 
+  mutate(mean = mean(value, na.rm = TRUE)) %>% 
+  ungroup() %>% 
+  mutate(county_sort = fct_reorder(county, mean, .desc = TRUE)) %>%
+  ggplot(aes(x = date, y = value)) +
+  geom_ribbon(aes(ymin = 0.15, ymax = 0.4), 
+              data = , fill = "#d6604d", alpha = 0.20) +
+  geom_ribbon(aes(ymin = 0, ymax = 0.15), 
+              data = , fill = "#4393c3" , alpha = 0.20) +
+  geom_rect(data = muac_malnut[1, ], ymin = 0, ymax = .4,
+            xmin = as.Date("2009-01-01"), xmax = as.Date("2010-01-01"),
+            fill = "#fdfbec", alpha = 0.33) +
+  geom_rect(data = muac_malnut[1, ], ymin = 0, ymax = .4,
+            xmin = as.Date("2011-01-01"), xmax = as.Date("2012-01-01"),
+            fill = "#fdfbec", alpha = 0.33) +
+  geom_rect(data = muac_malnut[1, ], ymin = 0, ymax = .4,
+            xmin = as.Date("2017-01-01"), xmax = as.Date("2018-01-01"),
+            fill = "#", alpha = 0.33) +
+  geom_smooth(colour = "#", span = span, alpha = 0.5, size = 0.25) +
+  geom_line(colour = grey70K) +
+
 #
 
 
