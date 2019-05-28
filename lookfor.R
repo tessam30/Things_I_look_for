@@ -336,3 +336,11 @@ mtcars %>%
 # ----------------------------- System or packages loaded --------
  sessionInfo()
 (.packages())
+
+# ----------------------------- Working with dates --------
+# Create a date from year, month and day
+flights %>% mutate(date = make_date(year, month, day))
+flights %>% mutate(wday = wday(date, label = TRUE))
+
+# ----------------------------- Models -------- 
+mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
