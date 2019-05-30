@@ -300,7 +300,7 @@ df %>% count(var1, var2, sort = TRUE)T
 
 
 
-#------------------------------- BROOMING ------------------- 
+#------------------------------- BROOMING & Models ------------------- 
 # TT snippet -- same as above.
 library(broom)
 cuisine_conf_ints <- by_dba %>%
@@ -310,6 +310,11 @@ cuisine_conf_ints <- by_dba %>%
   mutate(model = map(data, ~ t.test(.$avg_score))) %>%
   unnest(map(model, tidy))
 
+
+# Fitting a natural spline - from Bridges Tidy Tuesday
+model <- bridges %>%
+         mutate(good = bridge_condition == "Good") %>% 
+glm(y ~ ns(x, 4) + indicator_var, data = ., family = "binomial")
 
 # Widening data and PCA -- see the widyr package - https://github.com/dgrtwo/widyr
 
@@ -341,6 +346,10 @@ mtcars %>%
 # Create a date from year, month and day
 flights %>% mutate(date = make_date(year, month, day))
 flights %>% mutate(wday = wday(date, label = TRUE))
+
+# Create a decade variable using the 10 * *(X %/% Y) code 
+ economics %>% mutate(year = year(date), decade = 10 * (year %/% 10)) %>% count(year, decade) %>% print(n = Inf)
+
 
 # ----------------------------- Models -------- 
 mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
