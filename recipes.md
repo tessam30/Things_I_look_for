@@ -7,7 +7,7 @@
 | Carnitas | https://www.seriouseats.com/recipes/2010/07/no-waste-tacos-de-carnitas-with-salsa-verde-recipe.html | 
 | Chocolate Chip Cookies | https://github.com/tessam30/Things_I_look_for/issues/3 | 
 | Dandelion Greens with Eggs | https://github.com/tessam30/Things_I_look_for/issues/9#issue-445123449 |
-| Roasted Eggplant with shrimp | 
+| Roasted Eggplant with shrimp | https://github.com/tessam30/Things_I_look_for/issues/10#issue-452280816 | 
 | Granola with Pumpkin Seed | https://www.isabeleats.com/mexican-chocolate-pumpkin-seed-granola/ |
 | Mushroom soup | https://www.williams-sonoma.com/recipe/creamy-porcini-mushroom-soup.html |
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
