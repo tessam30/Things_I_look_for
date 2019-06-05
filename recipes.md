@@ -4,6 +4,7 @@
 | Beets | https://theartofdelicious.wordpress.com/2011/11/08/roasted-and-marinated-beets/ |
 | Beet Reuben | https://github.com/tessam30/Things_I_look_for/issues/8#issue-440389132 | . 
 | Butternut Squash Linguine | https://cookieandkate.com/2014/creamy-vegan-butternut-squash-linguine-with-fried-sage/ |
+| Cucumber and avocado salad | https://github.com/tessam30/Things_I_look_for/issues/12#issue-452281940 |
 | Carnitas | https://www.seriouseats.com/recipes/2010/07/no-waste-tacos-de-carnitas-with-salsa-verde-recipe.html | 
 | Chocolate Chip Cookies | https://github.com/tessam30/Things_I_look_for/issues/3 | 
 | Dandelion Greens with Eggs | https://github.com/tessam30/Things_I_look_for/issues/9#issue-445123449 |
