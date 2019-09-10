@@ -1,0 +1,23 @@
+Snippets of terminal code I forget.
+
+Unzipping a batch of zip files
+# Navigate to the directory containing the files
+
+cd /Users/timessam/Documents/USAID/Github/2019_Cambodia/GIS/DHS_modeled_surfaces
+
+# List the zip files
+find . -name "*.zip"
+unzip \*.zip
+
+# Clean up the mess of left over zip files
+rm -f *.zip
+
+# Basic Homebrew commands
+# Find any potential problems, update homebrew and formula, upgrade all outdated and unpinned brews
+brew doctor 
+brew update
+brew upgrade
+brew cleanup
+
+# Git commands
+# Check status of repo
