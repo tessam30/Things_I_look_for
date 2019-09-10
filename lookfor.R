@@ -238,8 +238,25 @@ muac_malnut %>%
   geom_smooth(colour = "#", span = span, alpha = 0.5, size = 0.25) +
   geom_line(colour = grey70K) +
 
-#
-
+#Sort each facet within a facet wrapped graph. Need tidytext.
+fertility_plot <- gha_df$Fertility_Region %>% 
+  mutate(Region_sort = fct_reorder(Region, `adolescent birth rate`),
+         reg_color = ifelse(Region == "National", '#80cdc1', grey30K)) %>% 
+  gather("indicator", "value", `adolescent birth rate`:`demand for family planning`) %>% 
+  mutate(indicator_sort = fct_reorder(indicator, value, .desc = TRUE),
+         region_sort2 = reorder_within(Region, value, indicator)) %>% 
+  ggplot(aes(y = value, x = region_sort2, fill = reg_color)) +
+  coord_flip() + geom_col() +
+  scale_x_reordered() +
+  facet_wrap(~indicator_sort, scales = "free") +
+  scale_fill_identity() +
+  theme_line +
+  theme(panel.spacing = unit(1, "lines")) +
+  y_axix_pct + 
+  labs(title = "Family planning and birth rates by region",
+       subtitle = "Note free scales to accomodate indicator ranges",
+       x = "", y = "",
+       caption = "Source: 2017 Multiple Indicator Cluster Survey (MICS)")
 
 #-------------------------------- Plot specific -----------------------------
 
