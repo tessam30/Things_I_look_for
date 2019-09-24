@@ -11,6 +11,7 @@
 | Dandelion Greens with Eggs | https://github.com/tessam30/Things_I_look_for/issues/9#issue-445123449 |
 | Roasted Eggplant with shrimp | https://github.com/tessam30/Things_I_look_for/issues/10#issue-452280816 | 
 | Granola with Pumpkin Seed | https://www.isabeleats.com/mexican-chocolate-pumpkin-seed-granola/ |
+| Kraut | https://github.com/tessam30/Things_I_look_for/issues/16#issue-497795075 |
 | Mushroom soup | https://www.williams-sonoma.com/recipe/creamy-porcini-mushroom-soup.html |
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
 | Noodles | https://www.allrecipes.com/recipe/11776/grandmas-noodles-ii/ |
