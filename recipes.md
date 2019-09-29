@@ -27,6 +27,7 @@
 | Sausage One Pot Pasta | https://damndelicious.net/2013/12/09/one-pot-andouille-sausage-skillet-pasta/ |
 | Sticky Cranberry Bread | https://cooking.nytimes.com/recipes/1017758-sticky-cranberry-gingerbread?action=click&module=Local%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Sweet Potato | https://bakerbynature.com/extra-crispy-sweet-potato-wedges/ |
+| Tahini Sauce | https://github.com/tessam30/Things_I_look_for/issues/17#issue-499977378 |
 | Vinaigrettes | https://github.com/tessam30/Things_I_look_for/issues/15#issue-461228429 |  
 | Whole Grain Waffles | https://github.com/tessam30/Things_I_look_for/issues/11#issue-452281335 |
 | Whole Grain Pancakes | https://cooking.nytimes.com/recipes/1019362-whole-grain-pancakes |
