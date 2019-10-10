@@ -103,6 +103,10 @@ df %>%
 
 # ----------------- Writing list to multiple files ----------------------
 
+# Put a pattern of objects into a single list
+graph_list <- mget(ls(pattern = "gph"))
+
+
 datalist <- list(impr_sanit  = impr_sanit, 
                unimp_sanit   = unimp_sanit,
                impr_h20      = impr_h20,
@@ -112,6 +116,8 @@ datalist <- list(impr_sanit  = impr_sanit,
 datalist %>%  
   names() %>% 
   map(., ~ write_csv(datalist[[.]], file.path(washpath, str_c(., ".csv"))))
+
+
 
 
 #------------------------------- Tidy Eval  -------------------
@@ -150,6 +156,30 @@ my_mutate <- function(df, expr) {
 # 1. use the ... in the function definition to capture any number of arguments
 # 2. use quos(...) to capture the ... as a list of formulas
 # 3. use !!! to splice the arguments into the group_by command
+
+
+# New format example {{ }}
+
+bplot_sort <- function(df, x = County, y = value, wrap = type, ctitle = "NA", rows = 2) {
+
+  cpt <- df %>% select(source) %>% unique()
+  
+  df %>%
+    mutate(indicator_sort = fct_reorder( {{ wrap }}, {{ y }}, .desc = TRUE),
+           County_sort = reorder_within( {{ x }}, {{ y }}, {{ wrap }} )) %>% 
+    ggplot(aes(y = {{ y }}, x = County_sort)) +
+    geom_col(fill = "#949494") + 
+    coord_flip() +  
+    scale_x_reordered() +
+    scale_y_continuous(label = percent_format(accuracy = 1)) +
+    facet_wrap(vars(indicator_sort), scales = "free_y", nrow = rows) +
+    theme_minimal() +
+    labs(x = "", y = "",
+         title = ctitle, 
+         caption = str_c("Source: ", cpt)) +
+    theme(strip.text = element_text(hjust = 0),
+          axis.text.y = element_text(size = 8))
+}
 
 
 #------------------------------- Case When  -------------------
