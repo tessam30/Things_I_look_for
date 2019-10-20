@@ -18,6 +18,7 @@
 | Pizza dough | https://github.com/tessam30/Things_I_look_for/issues/4#issue-403637636 | 
 | Pineapple Tepache | https://github.com/tessam30/Things_I_look_for/issues/5#issue-411139315 
 | Potato Soup | https://www.cookingclassy.com/creamy-potato-soup/ |
+| Pork Belly Slow Cooked | https://github.com/tessam30/Things_I_look_for/issues/18#issue-509643783 | . 
 | Pumpkin Pancakes | https://cooking.nytimes.com/recipes/1018934-fluffy-pumpkin-pancakes?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Pumpkin Pie | https://cooking.nytimes.com/recipes/1015621-pumpkin-pie-with-a-vodka-crust |
 | Quinoa Pancakes | https://cooking.nytimes.com/recipes/1013615-quinoa-pancakes?action=click&module=Global%20Search%20Recipe%20Card&pgType=search&rank=1 |
