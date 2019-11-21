@@ -96,6 +96,15 @@ read_path %>%
   # the name provided by the set_names(command). Necessary b/c not all the sheets are the same size
   list2env(., envir = .GlobalEnv)
 
+
+# Using fs and purrr to read in directory of files
+res <- path(pathname) %>% dir_ls(regexp = "texttoregex.csv") %>% map_df(read_csv, .id = "filename")
+
+# Read all files in a folder, place in a single dataframe
+fd <- list.files("folder", pattern = "*.csv", full.names = TRUE) %>%
+       purrrpurrr:map_df(f, readr::read_csv, .id = "id")
+
+
 # Loop over columns and summarise stuff
 df %>% 
   select(`Education Strategy Area(s)`:`Research Approach`) %>% 
