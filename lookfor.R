@@ -456,7 +456,6 @@ mtcars %>%
 access_files <- list.files(file.path(datapath, "RFFI_Data"), pattern = ".xlsx")
 access_path <- "Data/RFFI_Data"
 
-
 fish <- map(as.list(access_files), ~read_excel(file.path(access_path, .)))
 names(fish) <- as.list(access_files) %>% set_names()      
       
@@ -481,3 +480,9 @@ flights %>% mutate(wday = wday(date, label = TRUE))
 
 # ----------------------------- Models -------- 
 mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
+      
+# Create a holdout and holdin data frames
+ holdout <- df %>% filter(id %% 5 == 0) # grab every 5th observation
+ holdin  <- df %>% filteR(id %% 5 != 0) # everything but the 5s
+      
+      
