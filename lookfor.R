@@ -102,7 +102,7 @@ res <- path(pathname) %>% dir_ls(regexp = "texttoregex.csv") %>% map_df(read_csv
 
 # Read all files in a folder, place in a single dataframe
 fd <- list.files("folder", pattern = "*.csv", full.names = TRUE) %>%
-       purrrpurrr:map_df(f, readr::read_csv, .id = "id")
+       purrr:map_df(f, readr::read_csv, .id = "id")
 
 
 # Loop over columns and summarise stuff
@@ -297,6 +297,64 @@ fertility_plot <- gha_df$Fertility_Region %>%
        x = "", y = "",
        caption = "Source: 2017 Multiple Indicator Cluster Survey (MICS)")
 
+
+# move facets left
+theme(strip.text = element_text(hjust = 0, size = 10)
+
+# Filter a single dataframe multiple times within a function
+ parity_plot <- function(df, sub_filt = "Mathmatics", yearfilt = "2018-2019") {
+  df %>% 
+    filter(Subject == {{sub_filt}} & year == {{yearfilt}}) %>% 
+    filter(Subgroup != "White") %>% 
+    #filter(option_flag == 1) %>% 
+    mutate(school_sort = reorder_within(school_name, -op_gap, Subgroup)) %>% 
+    {# By wrapping ggplot call in brackets we can control where the pipe flow enters (df)
+      # This allows us to use filters within the ggplot call
+      ggplot() +
+        geom_abline(intercept = 0, slope = 1, color = non_ats, linetype = "dotted") +
+        #geom_polygon(data = df_poly, aes(-x, -y), fill="#fde0ef", alpha=0.25) +
+        geom_point(data = dplyr::filter(., school_name != "Arlington Traditional"),
+                   aes(y = value, x = benchmark, fill = ats_flag_color),
+                   size = 4, shape = 21, alpha = 0.75, colour = "white") +
+        geom_point(data = dplyr::filter(., school_name == "Arlington Traditional"),
+                   aes(y = value, x = benchmark, fill = ats_flag_color),
+                   size = 4, shape = 21, alpha = 0.80, colour = "white") +
+        facet_wrap(~Subgroup,
+                   labeller = labeller(groupwrap = label_wrap_gen(10))) +
+        coord_fixed(ratio = 1, xlim = c(40, 100), ylim = c(40, 100)) +
+        scale_fill_identity() +
+        theme_minimal() +
+        labs(x = "benchmark test value", y = "Subgroup test value",
+             title = str_c(sub_filt, " opportunity gap across subgroups (ATS in blue) for ", yearfilt),
+             subtitle = "Each point is a school -- points below the 45 degree line indicate an opportunity gap") +
+        theme(strip.text = element_text(hjust = 0))
+    }
+}
+     
+
+# Creating plots in a nested data frame and writing them to a file
+# Loop over plots by category, saving resulting plots in a grouped / nested dataframe
+# extract the nested plots by calling the appropriate position of the nested plot
+plots <- 
+  gov %>% 
+  group_by(Category) %>% 
+  nest() %>% 
+  mutate(plots = map2(data, Category, 
+                      ~gov_plot(.) + labs(x = "", y = "",
+                      title = str_c("Category ", Category, ": Governance scores for community fish refuges"),                      
+        caption = "Source: 2016 Rice Field Fishery Enhancement Project Database: Governance Scores Module")))
+         
+plots$plots[2]
+
+map2(file.path(imagepath, paste0("Category ", plots$Category,  
+                                 ": Governance scores for community fish refuges.pdf")), 
+     plots$plots,
+     height = 8.5, 
+     width = 11,
+     dpi = 300, 
+     ggsave)
+
+
 #-------------------------------- Plot specific -----------------------------
 
 # When plotting a heatmap, you can pass the label option through the scale_X_XX part. This allow
@@ -333,7 +391,6 @@ searchpaths()
 #------------------------------- Searching strings ------------------- 
 # Use str_detect to quickly search through strings for key words
 str_detect(var, "string to detect")
-
 
 # For filtering (can also use for binary mutates)
 df %>% filter(str_detect(var, "string"))
@@ -384,12 +441,27 @@ str_subset(dir(file.path(datapath)), "\\.csv")
 # Use the ^ to indicate the start of line and $ to indicate the end of a line
 rm(list = ls(pattern = "*_in$")) # - removing dataframes/objects that end in "_in"
 
+# remove everything after a string
+df %>% mutate(school_name = str_to_title(school_name) %>% str_remove_all(., "Elem.*"))
+
 
 #------------------------------- Purrr'ing ------------------- 
 # Split on a group, peform action across all subgroups
 mtcars %>% 
   split(.$cyl) %>% 
   map(., ~ggplot(., aes(mpg, hp)) + geom_point())
+      
+ 
+# Read a batch of files in and give them names      
+access_files <- list.files(file.path(datapath, "RFFI_Data"), pattern = ".xlsx")
+access_path <- "Data/RFFI_Data"
+
+
+fish <- map(as.list(access_files), ~read_excel(file.path(access_path, .)))
+names(fish) <- as.list(access_files) %>% set_names()      
+      
+      
+      
 
 # ----------------------------- multi-line cursor --------------
 # `control` + `option` plus up or down
