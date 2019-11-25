@@ -488,4 +488,9 @@ mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
  holdout <- df %>% filter(id %% 5 == 0) # grab every 5th observation
  holdin  <- df %>% filteR(id %% 5 != 0) # everything but the 5s
       
+# Packages that I should use more
+ skimr - https://github.com/ropensci/skimr 
+ rsample - for splitting data into test/training
+ recipes - https://tidymodels.github.io/recipes/     
+ parsnip - for tidy modeling (https://tidymodels.github.io/parsnip/index.html)
       
