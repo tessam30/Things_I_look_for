@@ -126,7 +126,10 @@ datalist %>%
   names() %>% 
   map(., ~ write_csv(datalist[[.]], file.path(washpath, str_c(., ".csv"))))
 
-
+# Quick mapping of new variables
+old <- c("x", "y", "x", "z")
+mapping <- c("x" = "a", "y" = "b", "z" = "c")
+new <- mapping[old]
 
 
 #------------------------------- Tidy Eval  -------------------
