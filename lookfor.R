@@ -535,5 +535,6 @@ mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
  parsnip - for tidy modeling (https://tidymodels.github.io/parsnip/index.html)
  cartogram - https://github.com/sjewo/cartogram
  patchwork - https://patchwork.data-imaginist.com/index.html
+ ggchicklet - https://git.rud.is/hrbrmstr/ggchicklet
       
       
