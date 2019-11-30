@@ -393,7 +393,13 @@ msme_plot(msme_geo, `Table 3_1 Sampled Licensed Establishments`, option = 1)
       
 
 #-------------------------------- Plot specific -----------------------------
-
+# Setting plotting themes up front
+  theme_update(
+  axis.ticks = element_blank(),
+  axis.text = element_blank())
+      
+      
+      
 # When plotting a heatmap, you can pass the label option through the scale_X_XX part. This allow
 # for formatting of percentages on the scale
 ... + scale_fill_viridis_c(direction = -1, alpha = 0.90, option = "A", label = percent_format(accuracy = 2)) + ...
