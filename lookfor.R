@@ -533,4 +533,7 @@ mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
  rsample - for splitting data into test/training
  recipes - https://tidymodels.github.io/recipes/     
  parsnip - for tidy modeling (https://tidymodels.github.io/parsnip/index.html)
+ cartogram - https://github.com/sjewo/cartogram
+ patchwork - https://patchwork.data-imaginist.com/index.html
+      
       
