@@ -11,6 +11,7 @@
 | Dandelion Greens with Eggs | https://github.com/tessam30/Things_I_look_for/issues/9#issue-445123449 |
 | Roasted Eggplant with shrimp | https://github.com/tessam30/Things_I_look_for/issues/10#issue-452280816 | 
 | Granola with Pumpkin Seed | https://www.isabeleats.com/mexican-chocolate-pumpkin-seed-granola/ |
+| Kale Soup | https://github.com/tessam30/Things_I_look_for/issues/20#issue-555031071 | 
 | Kraut | https://github.com/tessam30/Things_I_look_for/issues/16#issue-497795075 |
 | Mushroom soup | https://www.williams-sonoma.com/recipe/creamy-porcini-mushroom-soup.html |
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
@@ -29,6 +30,7 @@
 | Sticky Cranberry Bread | https://cooking.nytimes.com/recipes/1017758-sticky-cranberry-gingerbread?action=click&module=Local%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Sweet Potato | https://bakerbynature.com/extra-crispy-sweet-potato-wedges/ |
 | Tahini Sauce | https://github.com/tessam30/Things_I_look_for/issues/17#issue-499977378 |
+| Tuscan Kale Salad | https://github.com/tessam30/Things_I_look_for/issues/19 |  
 | Vinaigrettes | https://github.com/tessam30/Things_I_look_for/issues/15#issue-461228429 |  
 | Whole Grain Waffles | https://github.com/tessam30/Things_I_look_for/issues/11#issue-452281335 |
 | Whole Grain Pancakes | https://cooking.nytimes.com/recipes/1019362-whole-grain-pancakes |
