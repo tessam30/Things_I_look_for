@@ -226,6 +226,11 @@ case_when(
 #------------------------------- ggplot colors and plots ------------------- 
 # Use scale_fill_gradientn when you want to set a balanced divergent palette
 
+# See colors palette
+
+scales::show_col(colorRampPalette(RColorBrewer::brewer.pal(11,"Spectral"))(30))
+scales::show_col(c("red", "grey", "black", "white", "orange", "grey90"))
+
 # Define your max value in an object (here called shock_dev_max)
 shock_dev_max = unlist(shock_stats_county %>% summarise(max_dev = max(abs(shock_dev))))
 
