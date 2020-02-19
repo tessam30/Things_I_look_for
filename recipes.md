@@ -2,6 +2,7 @@
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Banana bread | https://www.fortheloveofcooking.net/2017/01/ultimate-banana-bread.html |
 | Beets | https://theartofdelicious.wordpress.com/2011/11/08/roasted-and-marinated-beets/ |
+| Beet salad | https://github.com/tessam30/Things_I_look_for/issues/21#issue-567567157 |
 | Beet Reuben | https://github.com/tessam30/Things_I_look_for/issues/8#issue-440389132 | 
 | Blueberry Cobbler | https://github.com/tessam30/Things_I_look_for/issues/13#issue-453833397 |
 | Butternut Squash Linguine | https://cookieandkate.com/2014/creamy-vegan-butternut-squash-linguine-with-fried-sage/ |
