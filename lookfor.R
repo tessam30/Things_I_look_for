@@ -541,5 +541,6 @@ mod <- MASS::rlm(n ~ wday * ns(date, 5), data = daily) # for natural splines
  cartogram - https://github.com/sjewo/cartogram
  patchwork - https://patchwork.data-imaginist.com/index.html
  ggchicklet - https://git.rud.is/hrbrmstr/ggchicklet
+ DependenciesGraphs - https://github.com/datastorm-open/DependenciesGraphs (Visualize package / function dependencies)     
       
       
