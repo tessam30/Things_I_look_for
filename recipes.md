@@ -8,6 +8,7 @@
 | Butternut Squash Linguine | https://cookieandkate.com/2014/creamy-vegan-butternut-squash-linguine-with-fried-sage/ |
 | Cucumber and avocado salad | https://github.com/tessam30/Things_I_look_for/issues/12#issue-452281940 |
 | Carnitas | https://www.seriouseats.com/recipes/2010/07/no-waste-tacos-de-carnitas-with-salsa-verde-recipe.html | 
+| Chicken Nuggets | https://github.com/tessam30/Things_I_look_for/issues/22#issue-569197711  |
 | Chocolate Chip Cookies | https://github.com/tessam30/Things_I_look_for/issues/3 | 
 | Dandelion Greens with Eggs | https://github.com/tessam30/Things_I_look_for/issues/9#issue-445123449 |
 | Roasted Eggplant with shrimp | https://github.com/tessam30/Things_I_look_for/issues/10#issue-452280816 | 
