@@ -84,6 +84,16 @@ df_wash <- excel_sheets(read_path) %>%
   set_names() %>%
   map(read_excel, path = read_path)
 
+# Write everything to a single data frame
+# Note: the map_df or map_dfr appends rows with the same header across tabs
+# but creates new columns if column names do not aling across tabs (worksheets)
+read_path <- file.path("/Users/tim/Desktop/Book1.xlsx")
+
+excel_sheets("/Users/tim/Desktop/Book1.xlsx") %>% 
+  set_names() %>% 
+  map_df(~ read_excel(path = read_path, sheet = .x, skip = 1), .id = "sheets")
+# The .id = "sheets" option embeds the name of the sheet in the resulting data frame.
+
 # Or, write everything to separate objects
 read_path %>%
   excel_sheets() %>% 
