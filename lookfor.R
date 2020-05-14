@@ -460,6 +460,13 @@ cuisine_conf_ints %>%
 
 str_remove("text (with some markes here)", "\\(*")
 
+#List the type of characters in a column      
+utf8::utf8_print(unique(hfr$mech_code), utf8 = FALSE)
+
+# fix it
+mutate(mech_code = gsub("(^[[:space:]]*)|([[:space:]]*$)", "", mech_code))
+      
+
 #------------------------------- Dates  ------------------- 
 # https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018-10-23/movie_profit.csv
 # https://github.com/dgrtwo/data-screencasts/blob/master/movie-profit.Rmd
