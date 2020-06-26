@@ -241,6 +241,9 @@ case_when(
 scales::show_col(colorRampPalette(RColorBrewer::brewer.pal(11,"Spectral"))(30))
 scales::show_col(c("red", "grey", "black", "white", "orange", "grey90"))
 
+# Restrict outliers to be capped at a range. In this case, -5 and 5. --> oobs = scales::squish
+scale_fill_gradientn(colours = rev(RColorBrewer::brewer.pal(11, "Spectral")), limits = c(-5,5), oob = scales::squish) +
+
 # Define your max value in an object (here called shock_dev_max)
 shock_dev_max = unlist(shock_stats_county %>% summarise(max_dev = max(abs(shock_dev))))
 
