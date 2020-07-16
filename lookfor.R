@@ -4,11 +4,27 @@
 # https://www.listendata.com/2016/08/dplyr-tutorial.html
 # 
 
-# Akin to Stata's isid command inside dplyr
-# Checking for uniqueness using var1 and var2
-
 #------------------------------- Dplyr chunks  -------------------
-x2 = distinct(df, var1, var2, .keep_all= TRUE)
+
+#NEW -- Added 2020-07-16
+# Dynamic variable names with across; Thanks @AC for motivating this.
+tribble(
+  ~site, ~TX_CURR, ~TX_MMD.u3, ~TX_MMD.o3,
+  "x",      10L,         3L,         7L,
+  "y",      20L,         4L,        12L,
+  "z",      15L,        10L,         5L
+) %>% 
+ mutate(across(starts_with("TX_MMD"), list(share = ~(.x / TX_CURR)),
+   .names = "IM_NOT_DEAD_to_{col}"))
+
+# Change how the names are generated
+df %>%
+ mutate(across(starts_with("TX_MMD"), list(share = ~(.x / TX_CURR)),
+   .names = "{fn}_{col}"))
+
+
+# Checking for uniqueness
+x2 = distinct(df, var1, var2, .keep_all = TRUE)
 
 # Count the number of distinct values taken by a set of variables
 df %>% group_by(var1, var2) %>% n_groups()
