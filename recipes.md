@@ -16,6 +16,7 @@
 | Kale Soup | https://github.com/tessam30/Things_I_look_for/issues/20#issue-555031071 | 
 | Kraut | https://github.com/tessam30/Things_I_look_for/issues/16#issue-497795075 |
 | Mushroom soup | https://www.williams-sonoma.com/recipe/creamy-porcini-mushroom-soup.html |
+| Macaroni bites | https://github.com/tessam30/Things_I_look_for/issues/23 |  
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
 | Noodles | https://www.allrecipes.com/recipe/11776/grandmas-noodles-ii/ |
 | Pizza dough | https://github.com/tessam30/Things_I_look_for/issues/4#issue-403637636 | 
