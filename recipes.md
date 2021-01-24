@@ -11,6 +11,7 @@
 | Chicken Nuggets | https://github.com/tessam30/Things_I_look_for/issues/22#issue-569197711  |
 | Chocolate Chip Cookies | https://github.com/tessam30/Things_I_look_for/issues/3 | 
 | Dandelion Greens with Eggs | https://github.com/tessam30/Things_I_look_for/issues/9#issue-445123449 |
+| French Toast | https://github.com/tessam30/Things_I_look_for/issues/24#issue-792811896 |
 | Roasted Eggplant with shrimp | https://github.com/tessam30/Things_I_look_for/issues/10#issue-452280816 | 
 | Granola with Pumpkin Seed | https://www.isabeleats.com/mexican-chocolate-pumpkin-seed-granola/ |
 | Kale Soup | https://github.com/tessam30/Things_I_look_for/issues/20#issue-555031071 | 
@@ -19,6 +20,7 @@
 | Macaroni bites | https://github.com/tessam30/Things_I_look_for/issues/23 |  
 | Noodles | https://www.geniuskitchen.com/recipe/chicken-soup-and-homemade-noodles-183954 |
 | Noodles | https://www.allrecipes.com/recipe/11776/grandmas-noodles-ii/ |
+| Oatmeal Bread | https://github.com/tessam30/Things_I_look_for/issues/25#issue-792813746 |
 | Pizza dough | https://github.com/tessam30/Things_I_look_for/issues/4#issue-403637636 | 
 | Pineapple Tepache | https://github.com/tessam30/Things_I_look_for/issues/5#issue-411139315 
 | Potato Soup | https://www.cookingclassy.com/creamy-potato-soup/ |
