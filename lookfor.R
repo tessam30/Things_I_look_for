@@ -100,6 +100,16 @@ df_wash <- excel_sheets(read_path) %>%
   set_names() %>%
   map(read_excel, path = read_path)
 
+# Loop over a  
+keep_list <- c("6MMD", "CXCA Data", "TB_PREV Data", "TX Data")
+    
+    safe <- 
+      excel_sheets(file_in) %>% 
+      set_names() %>% 
+      map(., .f = ~read_excel(file_in, sheet = .x)) %>% 
+      .[keep_list]
+
+
 # Write everything to a single data frame
 # Note: the map_df or map_dfr appends rows with the same header across tabs
 # but creates new columns if column names do not aling across tabs (worksheets)
