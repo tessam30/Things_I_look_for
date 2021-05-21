@@ -32,6 +32,7 @@
 | Roasted Almonds | https://github.com/tessam30/Things_I_look_for/issues/7#issue-438947051 | 
 | Salted Caramel Brownies | https://github.com/tessam30/Things_I_look_for/issues/14#issue-455327944 |
 | Sausage One Pot Pasta | https://damndelicious.net/2013/12/09/one-pot-andouille-sausage-skillet-pasta/ |
+| Somali Green Sauce | https://github.com/tessam30/Things_I_look_for/issues/26 |  
 | Sticky Cranberry Bread | https://cooking.nytimes.com/recipes/1017758-sticky-cranberry-gingerbread?action=click&module=Local%20Search%20Recipe%20Card&pgType=search&rank=1 |
 | Sweet Potato | https://bakerbynature.com/extra-crispy-sweet-potato-wedges/ |
 | Tahini Sauce | https://github.com/tessam30/Things_I_look_for/issues/17#issue-499977378 |
